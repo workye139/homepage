@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>나이 확인 프로그램</h1>
+    <input type="number" id="age" placeholder="나이를 입력하세요">
+    <input type="number" id="jumsu" placeholder="성적를 입력하세요">
+
+    <div id="result"></div>
+    <div id="result2"></div>
+    <button onclick="ageFuc()">버튼</button>
+    <script>
+    function ageFuc() {
+        //입력한 나이를 변수 넣는다.
+        let age = document.getElementById('age').value;
+        //판단한다
+        let pandan;
+        if (age >= 60) {
+            pandan = "노인";
+        }
+            else if(40<=age && age <=59){
+            pandan = "중년";
+        }
+            else if(20<=age && age <=39){
+            pandan = "청년"
+            }
+            else if(age && age <=19){
+            pandan = "미성년자"
+            }
+        //출력. 당신의 나이는 00살이고 00입니다.
+        let message = `당신의 나이는 ${age}살이고 ${pandan}입니다.`;
+        document.getElementById("result").innerHTML = message;
+
+
+     let jumsu = document.getElementById('jumsu').value;
+        let hakjum;
+    if (jumsu>=90) {
+        hakjum=`A`;
+    }
+    else if(jumsu>=80 && jumsu<=89){
+      hakjum=`B`;
+    }
+    else if(jumsu>=70 && jumsu<=79){
+      hakjum=`C`;
+    }
+    else if(jumsu>=60 && jumsu<=69){
+      hakjum=`D`;
+    }
+    else if(jumsu<=59){
+      hakjum=`F`;
+    }
+    let hakjumPandan = `${jumsu}점은 ${hakjum}학점입니다.`;
+        document.getElementById("result2").innerHTML = hakjumPandan;
+    
+    }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>z-index 실습</title>
+ <style>
+ .container {
+ position: relative;
+ width: 400px;
+ height: 300px;
+ margin: 50px auto;
+ border: 2px solid #333;
+ }
+
+ .box1 {
+ position: absolute;
+ top: 50px;
+ left: 50px;
+ width: 150px;
+ height: 100px;
+ background-color: #ff6b6b;
+ border: 2px solid #333;
+ }
+
+ .box2 {
+ position: absolute;
+ top: 100px;
+ left: 100px;
+ width: 150px;
+ height: 100px;
+ background-color: #4ecdc4;
+ border: 2px solid #333;
+ }
+
+ .box3 {
+ position: absolute;
+ top: 150px;
+ left: 150px;
+ width: 150px;
+ height: 100px;
+ background-color: #45b7d1;
+ border: 2px solid #333;
+ }
+ .box1 {
+ position: absolute;
+ top: 50px;
+ left: 50px;
+ width: 150px;
+ height: 100px;
+ background-color: #ff6b6b;
+ border: 2px solid #333;
+ z-index: 3; /* 가장 앞에 */
+}
+
+.box2 {
+ position: absolute;
+ top: 100px;
+ left: 100px;
+ width: 150px;
+ height: 100px;
+ background-color: #4ecdc4;
+ border: 2px solid #333;
+ z-index: 1; /* 가장 뒤에 */
+}
+
+.box3 {
+ position: absolute;
+ top: 150px;
+ left: 150px;
+ width: 150px;
+ height: 100px;
+ background-color: #45b7d1;
+ border: 2px solid #333;
+ z-index: 2; /* 중간에 */
+}
+ .navbar {
+ background-color: #333;
+ padding: 0;
+ margin: 0;
+ }
+
+ .nav-item {
+ display: inline-block;
+ position: relative;
+ }
+
+ .nav-link {
+ display: block;
+ color: white;
+ text-decoration: none;
+ padding: 15px 20px;
+ }
+
+ .nav-link:hover {
+ background-color: #555;
+ }
+
+ .dropdown-menu {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ background-color: white;
+ border: 1px solid #ddd;
+ min-width: 200px;
+ display: none;
+ z-index: 1000; /* 다른 요소들보다 앞에 */
+ }
+
+ .dropdown-item {
+ display: block;
+ color: #333;
+ text-decoration: none;
+ padding: 10px 15px;
+ border-bottom: 1px solid #eee;
+ }
+
+ .dropdown-item:hover {
+ background-color: #f8f9fa;
+ }
+
+ .nav-item:hover .dropdown-menu {
+ display: block;
+ }
+
+ .content {
+ height: 200px;
+ background-color: #f0f0f0;
+ padding: 20px;
+ position: relative;
+ z-index: 1; /* 낮은 z-index */
+ }
+ </style>
+</head>
+<body>
+<nav class="navbar">
+ <div class="nav-item">
+ <a href="#" class="nav-link">홈</a>
+ </div>
+ <div class="nav-item">
+ <a href="#" class="nav-link">서비스</a>
+ <div class="dropdown-menu">
+ <a href="#" class="dropdown-item">웹 개발</a>
+ <a href="#" class="dropdown-item">앱 개발</a>
+ <a href="#" class="dropdown-item">디자인</a>
+ <a href="#" class="dropdown-item">컨설팅</a>
+ </div>
+ </div>
+ <div class="nav-item">
+ <a href="#" class="nav-link">회사소개</a>
+ </div>
+ <div class="nav-item">
+ <a href="#" class="nav-link">연락처</a>
+ </div>
+ </nav>
+
+ <div class="content">
+ <h2>메인 콘텐츠 영역</h2>
+ <p>드롭다운 메뉴가 이 영역 위에 제대로 나타나는지 확인해보세요!</p>
+ </div>
+ </div>
+</body>
+</html>

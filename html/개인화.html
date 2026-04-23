@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>개인화 메시지 생성기</title>
+ <style>
+ .container { max-width: 500px; margin: 50px auto; padding: 20px; }
+ input, button { padding: 10px; margin: 5px; width: 200px; }
+ .result {
+ background: #f0f8ff;
+ padding: 15px;
+ border-radius: 5px;
+ margin-top: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <h2> 개인화 메시지 생성기</h2>
+
+ <input type="text" id="userName" placeholder="이름을 입력하세요">
+ <input type="text" id="productName" placeholder="상품명을 입력하세요">
+ <input type="number" id="quantity" placeholder="수량">
+ <input type="address" id="address" placeholder="주소를 입력하세요">
+ <button onclick="generateMessage()">메시지 생성</button>
+
+ <div id="messageResult" class="result"></div>
+ </div>
+
+ <script>
+ function generateMessage() {
+ // 입력값 가져오기
+ // 빈 입력이 있는지 판단하기
+ // 현재 시간 정보 얻어오기
+ // html태그를 만들어서 출력하기
+ let user = document.getElementById('userName').value;
+ let product = document.getElementById('productName').value;
+ let qty = document.getElementById('quantity').value;
+ let address = document.getElementById('address').value;
+
+
+ // 입력값 검증
+ if (!user || !product || !qty || !address) {
+ alert('모든 정보를 입력해주세요!');
+ return;
+ }
+
+ // 현재 시간 정보
+ let now = new Date(); //힌트 객체명은 첫글자가 대문자임. new 객체명() 해당 객체를 메모리에 올린다.(사용) 
+ let time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+
+ // 템플릿 리터럴로 복합 메시지 생성
+ let message = `
+ <h3> 주문 확인</h3>
+ <p><strong>${user}</strong>님이 선택하신 상품:</p>
+ <ul>
+ <li>상품명: ${product}</li>
+ <li>수량: ${qty}개</li>
+ <li>주문 시간: ${time}</li>
+ <li>주소: ${address}</li>
+
+ </ul>
+ <p>총 <strong style="color: #ff6b6b;">${qty}개</strong>의 ${product}이(가) 장바구니에 담겼습니다!</p>
+ <p>주소 확인: ${address} </p>
+ `;
+
+ // 결과 표시
+ document.getElementById('messageResult').innerHTML = message;
+ }
+
+ // 엔터키로도 실행 가능하게
+ document.addEventListener('keypress', function(event) {
+ if (event.key === 'Enter') {
+ generateMessage();
+ }
+ });
+ </script>
+</body>
+</html>

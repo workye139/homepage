@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>미디어 쿼리 기초</title>
+ <style>
+ .container {
+ padding: 20px;
+ background-color: lightblue;
+ text-align: center;
+ }
+
+ .message {
+ font-size: 24px;
+ font-weight: bold;
+ }
+
+ @media (max-width: 500px){
+    .container{
+        background-color: aquamarine;
+        .message::after
+         content: "- 모바일 화면";
+    }
+}
+ @media (max-width: 800px){
+    .container{
+        background-color: rgb(219, 196, 255);
+        .message::after
+         content: "- 탭 화면";
+    }
+}
+
+ </style>
+</head>
+<body>
+ <div class="container">
+ <div class="message">현재 화면 크기</div>
+ <p>브라우저 창 크기를 조절해보세요!</p>
+ </div>
+</body>
+</html>

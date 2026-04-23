@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Grid 기초 실습</title>
+ <style>
+ .grid-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr; /* 3개의 동일한 열 */
+ grid-template-rows: 100px 100px 100px; /* 3개의 100px 행 */
+ gap: 10px; /* 격자 사이 간격 */
+ background-color: #f0f0f0;
+ padding: 20px;
+ }
+
+ .grid-item {
+ background-color: #4CAF50;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 18px;
+ border-radius: 5px;
+ }
+ .grid-container-advanced {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr; /* 2:1:1 비율 */
+ grid-template-rows: 80px auto 60px; /* 고정, 자동, 고정 */
+ gap: 15px;
+ height: 400px;
+ background-color: #e8f4f8;
+ padding: 20px;
+}
+
+.grid-item-special {
+ background-color: #2196F3;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 8px;
+}
+.website-layout {
+ display: grid;
+ grid-template-columns: 200px 1fr 150px; /* 사이드바, 메인, 광고 */
+ grid-template-rows: 80px 1fr 60px; /* 헤더, 콘텐츠, 푸터 */
+ gap: 10px;
+ height: 100vh; /* 화면 전체 높이 */
+ padding: 10px;
+}
+
+.header {
+ grid-column: 1 / -1; /* 첫 번째 열부터 마지막 열까지 */
+ background-color: #333;
+ color: white;
+ display: flex;
+ align-items: center;
+ padding: 0 20px;
+}
+
+.sidebar {
+ background-color: #f4f4f4;
+ padding: 20px;
+}
+
+.main-content {
+ background-color: white;
+ padding: 20px;
+ border: 1px solid #ddd;
+}
+
+.ads {
+ background-color: #ffe6e6;
+ padding: 10px;
+ text-align: center;
+}
+
+.footer {
+ grid-column: 1 / -1; /* 모든 열에 걸쳐 배치 */
+ background-color: #666;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+ </style>
+</head>
+<body>
+ <div class="grid-container">
+ <div class="grid-item">1</div>
+ <div class="grid-item">2</div>
+ <div class="grid-item">3</div>
+ <div class="grid-item">4</div>
+ <div class="grid-item">5</div>
+ <div class="grid-item">6</div>
+ <div class="grid-item">7</div>
+ <div class="grid-item">8</div>
+ <div class="grid-item">9</div>
+ </div>
+ <div class="grid-container-advanced">
+ <div class="grid-item-special">넓은 헤더</div>
+ <div class="grid-item-special">메뉴1</div>
+ <div class="grid-item-special">메뉴2</div>
+ <div class="grid-item-special">메인 콘텐츠</div>
+ <div class="grid-item-special">사이드바1</div>
+ <div class="grid-item-special">사이드바2</div>
+ <div class="grid-item-special">푸터1</div>
+ <div class="grid-item-special">푸터2</div>
+ <div class="grid-item-special">푸터3</div>
+</div>
+<div class="website-layout">
+ <header class="header">웹사이트 헤더</header>
+ <aside class="sidebar">
+ <h3>사이드바</h3>
+ <ul>
+ <li>메뉴 1</li>
+ <li>메뉴 2</li>
+ <li>메뉴 3</li>
+ </ul>
+ </aside>
+ <main class="main-content">
+ <h1>메인 콘텐츠</h1>
+ <p>여기에 주요 내용이 들어갑니다.</p>
+ </main>
+ <aside class="ads">광고 영역</aside>
+ <footer class="footer">푸터</footer>
+</div>
+</body>
+</html>

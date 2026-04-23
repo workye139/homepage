@@ -1,0 +1,1626 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  height: 100vh; /* 화면 꽉 채움 */
+
+  background-size: cover; /* 꽉 채움 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+}
+
+/* 나머지 페이지 */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+/* s1 배경 이미지 설정 보완 */
+.s1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+/* 2. 텍스트와 배경을 하나로 묶어 강제로 16:9 비율을 유지하는 마법의 컨테이너 */
+.title {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/personal1/웹페이지용-이미지-0.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.title-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+}
+.step1 {
+  top: 22.6%;
+  left: 22.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 40px;
+  font-weight: 200;
+} /* 기획스토리 */
+.step2 {
+  top: 33%;
+  left: 29%;
+  font-size: 80px;
+  color: #000;
+  font-weight: 800;
+  font-family: sans-serif;
+} /* 시각화 */
+.step3 {
+  top: 41.5%;
+  left: 20.5%;
+  color: #575246;
+  font-weight: 400;
+  font-family: sans-serif;
+} /* 영상 */
+
+.s2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-1.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.background-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+
+.step4 {
+  top: 13.5%;
+  left: 46%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 50px;
+  font-weight: 800;
+}
+.step5 {
+  top: 28%;
+  left: 61%;
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step6 {
+  top: 28%;
+  left: 110%;
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step7 {
+  top: 67%;
+  left: 50.5%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step8 {
+  top: 67%;
+  left: 73.7%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step9 {
+  top: 83%;
+  left: 27%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step10 {
+  top: 83%;
+  left: 73.5%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center; 
+}
+.s3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.purpose {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-2.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.purpose-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+
+.step11 {
+  top: 13.5%;
+  left: 46%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 68px;
+  font-weight: 800;
+}
+.step12 {
+  top: 28%;
+  left: 70%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step13 {
+  top: 53%;
+  left: 75%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step14 {
+  top: 82%;
+  left: 55%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.s4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.target {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-3.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.target-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+
+.step15{
+  top: 21%;
+  left: 34.5%;
+  font-size: 38px;
+  color: #627080;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step16{
+  top: 21%;
+  left: 79%;
+  font-size: 38px;
+  color: #627080;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step17{
+  top: 30.5%;
+  left: 63%;
+  font-size: 27px;
+  color: #3e3d3b;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: left;
+}
+.step18{
+  top: 30.5%;
+  left: 107.5%;
+  font-size: 27px;
+  color: #3e3d3b;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.step19{
+  top: 65%;
+  left: 35%;
+  font-size: 63px;
+  color: black;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step20{
+  top: 80%;
+  left: 34%;
+  font-size: 45px;
+  font-style: italic;
+  color: black;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step21{
+  top: 72%;
+  left: 80%;
+  font-size: 60px;
+  font-style: oblique;
+  color: black;
+  font-weight: 800;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.s5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.visual {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-4.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.visual-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step22{
+  top: 12%;
+  left: 45%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 59px;
+  font-weight: 800;
+}
+.step23{
+  top: 58%;
+  left: 53.5%;
+  font-size: 37px;
+  color: #000;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.step24{
+  top: 58%;
+  left: 102%;
+  font-size: 37px;
+  color: #000;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.step25{
+  top: 65.3%;
+  left: 47%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step26{
+  top: 65.3%;
+  left: 95.8%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step27{
+  top: 73%;
+  left: 46%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step28{
+  top: 73%;
+  left: 94.8%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step29{
+  top: 82%;
+  left: 46.2%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step30{
+  top: 80.5%;
+  left: 95.2%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step31{
+  top: 90%;
+  left: 46.2%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.step32{
+  top: 88.5%;
+  left: 95.1%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.step33{
+  top: 65.3%;
+  left: 53.3%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+
+.step34{
+  top: 65.3%;
+  left: 101.9%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step35{
+  top: 72.8%;
+  left: 53.3%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step36{
+  top: 72.8%;
+  left: 101.9%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step37{
+  top: 81.8%;
+  left: 53.3%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step38{
+  top: 80.6%;
+  left: 101.9%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step39{
+  top: 89.8%;
+  left: 53.3%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+.step40{
+  top: 88.2%;
+  left: 101.9%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 530;
+  font-family: sans-serif;
+}
+
+.s6 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.synopsis {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-5.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.synopsis-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step41{
+  top: 12%;
+  left: 45%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 59px;
+  font-weight: 800;
+}
+.step42{
+  top: 67%;
+  left: 47.5%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 650;
+  font-family: sans-serif;
+}
+.step43{
+  top: 67%;
+  left: 70%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 650;
+  font-family: sans-serif;
+}
+.step44{
+  top: 67%;
+  left: 94.2%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 650;
+  font-family: sans-serif;
+}
+.step45{
+  top: 67%;
+  left: 116.1%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 650;
+  font-family: sans-serif;
+}
+.step46{
+  top: 79%;
+  left: 15%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step47{
+  top: 79%;
+  left: 38.3%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step48{
+  top: 80.5%;
+  left: 62%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step49{
+  top: 80.5%;
+  left: 85%;
+  font-size: 26px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.s7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.process {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-6.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.process-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step50{
+  top: 14%;
+  left: 44%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 64px;
+  font-weight: 800;
+}
+.step51{
+  top: 24.5%;
+  left: 18.5%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step52{
+  top: 24.5%;
+  left: 50.5%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step53{
+  top: 24.5%;
+  left: 81.8%;
+  font-size: 35px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step54{
+  top: 72%;
+  left: 9%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step55{
+  top: 73%;
+  left: 18.7%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step56{
+  top: 39%;
+  left: 18.7%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step57{
+  top: 74.5%;
+  left: 29%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step58{
+  top: 73%;
+  left: 40.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step59{
+  top: 39%;
+  left: 40.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step60{
+  top: 37%;
+  left: 50%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step61{
+  top: 75%;
+  left: 50%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step62{
+  top: 71.5%;
+  left: 60%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step63{
+  top: 40%;
+  left: 60%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step64{
+  top: 40%;
+  left: 70.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step65{
+  top: 71.5%;
+  left: 70.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step66{
+  top: 80%;
+  left: 77.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step67{
+  top: 38.8%;
+  left: 77.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step68{
+  top: 74.5%;
+  left: 84.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step69{
+  top: 71.5%;
+  left: 92.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step70{
+  top: 40%;
+  left: 92.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.s8 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.preproduction {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-7.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.preproduction-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step71{
+  top: 11.5%;
+  left: 44%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 52px;
+  font-weight: 800;
+}
+.step72{
+  top: 30.8%;
+  left: 19.5%;
+  font-size: 45px;
+  color: #d8882e;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step73{
+  top: 55.3%;
+  left: 49.5%;
+  font-size: 35px;
+  color: #000;
+  line-height: 1.5;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: left;
+}
+.step74{
+  top: 82.3%;
+  left: 49.5%;
+  font-size: 23px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: left;
+}
+.step75{
+  top: 22.5%;
+  left: 74.5%;
+  font-size: 45px;
+  color: #d8882e;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step76{
+  top: 63.3%;
+  left: 123.5%;
+  font-size: 20px;
+  color: #000;
+  line-height: 1.5;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: left;
+}
+.s9 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.production {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-8.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.production-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step77{
+  top: 11.5%;
+  left: 44%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 52px;
+  font-weight: 800;
+}
+.step78{
+  top: 65%;
+  left: 50%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step79{
+  top: 68%;
+  left: 50%;
+  font-size: 23px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step80{
+  top: 77%;
+  left: 27.5%;
+  font-size: 20px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step81{
+  top: 77%;
+  left: 73%;
+  font-size: 20px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.s10 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.postproduction {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-9.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.postproduction-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step82{
+  top: 11.5%;
+  left: 44%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 52px;
+  font-weight: 800;
+}
+.step83{
+  top: 38%;
+  left: 11%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step84{
+  top: 58.5%;
+  left: 11%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step85{
+  top: 80.5%;
+  left: 11%;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step86{
+  top: 31.5%;
+  left: 69.7%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step87{
+  top: 50.5%;
+  left: 79.5%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step88{
+  top: 89%;
+  left: 57%;
+  font-size: 25px;
+  color: #000;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-align: center;
+}
+.s11 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.tools {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-10.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.tools-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step89{
+  top: 11.5%;
+  left: 44%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 52px;
+  font-weight: 800;
+}
+.step90{
+  top: 22%;
+  left: 50%;
+  font-size: 28px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step91{
+  top: 54.5%;
+  left: 50%;
+  font-size: 27px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step92{
+  top: 57.5%;
+  left: 49.8%;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step93{
+  top: 68.5%;
+  left: 50%;
+  font-size: 23px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step94{
+  top: 71%;
+  left: 49.8%;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step95{
+  top: 76%;
+  left: 50%;
+  font-size: 23px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step96{
+  top: 79.5%;
+  left: 49.8%;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step97{
+  top: 85.5%;
+  left: 50%;
+  font-size: 23px;
+  color: #000;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-align: center;
+}
+.step98{
+  top: 89.5%;
+  left: 49.8%;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.s12 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.result {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-11.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.result-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step99{
+  top: 11.5%;
+  left: 48%;
+  font-family: sans-serif;
+  color: #d39647;
+  font-size: 61px;
+  font-weight: 800;
+}
+.step100{
+  top: 11.5%;
+  left: 92%;
+  font-family: sans-serif;
+  color: #d39647;
+  font-size: 61px;
+  font-weight: 800;
+}
+.step101{
+  top: 26%;
+  left: 45%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 63px;
+  font-weight: 800;
+}
+.step102{
+  top: 44.5%;
+  left: 46%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 42px;
+  font-weight: 800;
+  text-align: left;
+}
+.step103{
+  top: 44.5%;
+  left: 94%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 42px;
+  font-weight: 800;
+  text-align: left;
+}
+.step104{
+  top: 73%;
+  left: 46%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;
+}
+.step105{
+  top: 73%;
+  left: 94%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;
+}
+.s13 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.behind {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-12.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.behind-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step106{
+  top: 13.5%;
+  left: 47%;
+  font-family: sans-serif;
+  color: #25343b;
+  font-size: 59px;
+  font-weight: 800;
+}
+.step107{
+  top: 29.3%;
+  left: 73.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;
+}
+.step108{
+  top: 29.3%;
+  left: 110.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;
+}
+.step109{
+  top: 46%;
+  left: 47.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: left;
+}
+.step110{
+  top: 76%;
+  left: 47.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: left;
+}
+.step111{
+  top: 46%;
+  left: 66%;
+  font-family: sans-serif;
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  text-align: left;
+}
+.step112{
+  top: 46%;
+  left: 100%;
+  font-family: sans-serif;
+  color: 000;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+.step113{
+  top: 76%;
+  left: 64%;
+  font-family: sans-serif;
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  text-align: left;
+}
+.step114{
+  top: 76.5%;
+  left: 100%;
+  font-family: sans-serif;
+  color: 000;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+.s14 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.roadmap {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-13.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.roadmap-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step115{
+  top: 12%;
+  left: 46%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 59px;
+  font-weight: 800;
+}
+.step116{
+  top: 58%;
+  left: 23.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: center;
+}
+.step117{
+  top: 46.5%;
+  left: 52%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: center;
+}
+.step118{
+  top: 34.5%;
+  left: 80.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: center;
+}
+.step119{
+  top: 68%;
+  left: 55.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: left;
+}
+.step120{
+  top: 80%;
+  left: 55.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: left;
+}
+.step121{
+  top: 63.5%;
+  left: 83.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27.5px;
+  font-weight: 550;
+  text-align: left;
+}
+.step122{
+  top: 79.5%;
+  left: 83.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27.5px;
+  font-weight: 550;
+  text-align: left;
+}
+.step123{
+  top: 54.8%;
+  left: 112%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27.5px;
+  font-weight: 550;
+  text-align: left;
+}
+.step124{
+  top: 70.8%;
+  left: 112%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27.5px;
+  font-weight: 550;
+  text-align: left;
+}
+.s15 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: #000;
+}
+
+.words {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+  background-image: url("../img/personal1/웹페이지용-이미지-14.jpg");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.words-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 0.5px;
+  color: #000;
+  width: 80%;
+}
+.step125{
+  top: 12%;
+  left: 62.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 59px;
+  font-weight: 800;
+}
+.step126{
+  top: 28%;
+  left: 33.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step127{
+  top: 44%;
+  left: 68%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step128{
+  top: 78%;
+  left: 9.3%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step129{
+  top: 78%;
+  left: 41%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step130{
+  top: 78%;
+  left: 73.8%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step131{
+  top: 86%;
+  left: 45.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
+.step132{
+  top: 86%;
+  left: 77.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
+.step133{
+  top: 86%;
+  left: 109.5%;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}

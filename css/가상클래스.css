@@ -1,0 +1,55 @@
+.navbar{
+    background-color: #2c3e50;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ul li{
+    position: relative;
+}
+
+.navbar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover{
+    background-color: #34495e;
+    color: #3498db;
+
+}
+
+.navbar a.current{
+    background-color: #3498db;
+    color: white;
+}
+
+.navbar li:first-child a{
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.navbar li:last-child a{
+    background-color: #3498db; 
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+.navbar li:nth-child(3) a{
+    background-color: #53df66; 
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+}
+
+.navbar a:visited {
+    color: red;
+
+}

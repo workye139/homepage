@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 회원가입 - 거주지역 선택 </h2>
+    <form>
+        <label for="region"> 거주 지역: </label>
+        <select id="region" name="region">
+            <option value=""> -- 지역을 선택하세요 --</option>
+            <optgroup label="특별시/광역시">
+                <option value="seoul" selected> 서울 </option>
+                <option value="busan"> 부산 </option>
+                <option value="daegu"> 대구 </option>
+                <option value="incheon"> 인천 </option>
+            </optgroup>
+            <optgroup label="도/지역">
+                <option value="gyeonggi"> 경기도 </option>
+                <option value="gangwon"> 강원도 </option>
+                <option value="chougbuk"> 충청북도 </option>
+                <option value="chougnam"> 충청남도 </option>
+            </optgroup>
+        </select>
+        <br/><br/>
+        <label for="interest"> 관심 분야(복수선택): </label>
+        <select id="interest" name="interest" multiple size="5">
+            <optgroup label="당신이 잘하는 기술?">
+                <option value="web1" > 웹개발1 </option>
+                <option value="web2" > 웹개발2 </option>                <option value="daegu"> 대구 </option>
+                <option value="web3" > 웹개발3 </option>
+                <option value="web4" > 웹개발4 </option>
+                <option value="web5" > 웹개발5 </option>
+                <option value="web6" > 웹개발6 </option>
+                <option value="web7" > 웹개발7 </option>
+            </optgroup>
+            </select>
+            <p><small> Ctrl(Cmd) + 클릭으로 여러 항목을 선택할 수 있습니다.</small></p>
+            <div>
+                <h3>문의 내용: </h3></p>
+                <label>문의할 사항</label>
+                <textarea name="inquiry" rows="5" cols="80" placeholder="자유롭게 문의하실 부분을 작성해주세요~"></textarea>
+            </div>
+
+        <button type="submit">전송</button>
+</form>
+    </form>
+</body>
+</html>

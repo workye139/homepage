@@ -1,0 +1,1315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  height: 100vh; /* 화면 꽉 채움 */
+
+  background-size: cover; /* 꽉 채움 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+}
+
+/* 나머지 페이지 */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* s1 배경 이미지 설정 보완 */
+.s1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+/* 2. 텍스트와 배경을 하나로 묶어 강제로 16:9 비율을 유지하는 마법의 컨테이너 */
+.title {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team1/팀플1\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.title-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+
+.step1{
+  top: 45.6%;
+  left: 50%;
+  font-family: 'Times New Roman';
+  color: white;
+  font-size: 75px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 7px #000;
+} 
+.step2{
+  top: 52.8%;
+  left: 50%;
+  font-family: sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 7px #000;
+} 
+
+.s2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+/* 2. 텍스트와 배경을 하나로 묶어 강제로 16:9 비율을 유지하는 마법의 컨테이너 */
+.background {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team1/팀플1\ \(2\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.background-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+
+.step3 {
+  top: 18%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 60px;
+  font-weight: 550;
+  text-align: center;
+}
+.step4 {
+  top: 40%;
+  left: 18.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 50px;
+  font-weight: 550;
+  text-align: center;
+}
+.step5 {
+  top: 67.5%;
+  left: 18.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 50px;
+  font-weight: 550;
+  text-align: center;
+}
+.step6 {
+  top: 40%;
+  left: 75%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step7 {
+  top: 67.5%;
+  left: 75%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step8 {
+  top: 89.2%;
+  left: 70%;
+  font-family: 'sans-serif';
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+
+.s3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.strength {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(3\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.strength-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step9 {
+  top: 32%;
+  left: 23%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 50px;
+  font-weight: 550;
+  text-align: center;
+}
+.step10 {
+  top: 32%;
+  left: 76.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 50px;
+  font-weight: 550;
+  text-align: center;
+  text-shadow: 1px 1px 21px white;
+
+}
+.step11 {
+  top: 42%;
+  left: 23%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: center;
+}
+.step12 {
+  top: 42%;
+  left: 76.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 15px #222222;
+}
+.step13 {
+  top: 47%;
+  left: 23%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step14 {
+  top: 47%;
+  left: 76.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 15px #222222;
+}
+.step15 {
+  top: 57%;
+  left: 23%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: center;
+}
+.step16 {
+  top: 57%;
+  left: 76.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 15px #222222;
+
+}
+.step17 {
+  top: 60.2%;
+  left: 23%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step18 {
+  top: 60.2%;
+  left: 76.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 15px #222222;
+
+}
+.s4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.storyboard {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(4\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.storyboard-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step19 {
+  top: 16%;
+  left: 20%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 58px;
+  font-weight: 550;
+  text-align: center;
+}
+.step20 {
+  top: 63%;
+  left: 12%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step21 {
+  top: 63%;
+  left: 27.2%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step22 {
+  top: 63%;
+  left: 42.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step23 {
+  top: 63%;
+  left: 57.8%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step24 {
+  top: 63%;
+  left: 72.8%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step25 {
+  top: 63%;
+  left: 88%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.step26 {
+  top: 78%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 40px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+
+.s5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.Flow {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(5\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.Flow-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step27 {
+  top: 13%;
+  left: 25%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 58px;
+  font-weight: 550;
+  text-align: center;
+}
+.step28 {
+  top: 26%;
+  left: 14.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+}
+.step29 {
+  top: 26%;
+  left: 38.2%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+}
+.step30 {
+  top: 26%;
+  left: 62%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+}
+.step31 {
+  top: 26%;
+  left: 85.7%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+}
+.step32 {
+  top: 42%;
+  left: 38.2%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step33 {
+  top: 42%;
+  left: 75.5%;
+  font-family: 'sans-serif';
+  color: rgb(0, 14, 59);
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step34 {
+  top: 52%;
+  left: 13%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step35 {
+  top: 62%;
+  left: 13%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step36 {
+  top: 72%;
+  left: 13%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step37 {
+  top: 52%;
+  left: 38%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step38 {
+  top: 61.5%;
+  left: 38%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step39 {
+  top: 71.5%;
+  left: 38%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step40 {
+  top: 52%;
+  left: 75.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step41 {
+  top: 61.7%;
+  left: 75.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step42 {
+  top: 71.5%;
+  left: 75.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30.5px;
+  font-weight: 550;
+  text-align: center;
+}
+.step43 {
+  top: 86.2%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 38px;
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+}
+
+.s6 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S1씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(6\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S1씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step44 {
+  top: 12%;
+  left: 33.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 46px;
+  font-weight: 550;
+  text-align: center;
+}
+.step45 {
+  top: 30%;
+  left: 72.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step46 {
+  top: 40%;
+  left: 91.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step47 {
+  top: 48%;
+  left: 91.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step48 {
+  top: 58%;
+  left: 91.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step49 {
+  top: 85%;
+  left: 72.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+
+.s7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S2씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(7\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S2씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step50 {
+  top: 12%;
+  left: 33.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 46px;
+  font-weight: 550;
+  text-align: center;
+}
+.step51 {
+  top: 30%;
+  left: 72%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: center;
+}
+.step52 {
+  top: 40%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step53 {
+  top: 48.5%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step54 {
+  top: 57%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step55 {
+  top: 82%;
+  left: 72.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+.s8 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S3씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(8\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S3씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step56 {
+  top: 12%;
+  left: 33.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 46px;
+  font-weight: 550;
+  text-align: center;
+}
+.step57 {
+  top: 30%;
+  left: 73%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 23px;
+  font-weight: 550;
+  text-align: center;
+}
+.step58 {
+  top: 40%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step59 {
+  top: 48.5%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step60 {
+  top: 78%;
+  left: 72.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+.s9 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S4씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(9\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S4씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step61 {
+  top: 12%;
+  left: 33.5%;
+  font-family: 'sans-serif';
+  color: #000;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: center;
+}
+.step62 {
+  top: 31%;
+  left: 70.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: center;
+}
+.step63 {
+  top: 39%;
+  left: 89.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step64 {
+  top: 49%;
+  left: 89.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: left;
+}
+.step65 {
+  top: 78%;
+  left: 95%;
+  font-family: 'sans-serif';
+  color: #000;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+}
+.step66 {
+  top: 85.5%;
+  left: 95%;
+  font-family: 'sans-serif';
+  color: #000;
+  font-size: 23px;
+  font-weight: 550;
+  text-align: left;
+}
+.step67 {
+  top: 78%;
+  left: 91.1%;
+  font-family: 'sans-serif';
+  color: #000;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+}
+.step68 {
+  top: 85.5%;
+  left: 91%;
+  font-family: 'sans-serif';
+  color: #000;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+}
+.s10 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S5씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(10\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S5씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step69 {
+  top: 12.5%;
+  left: 31.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: center;
+}
+.step70 {
+  top: 33%;
+  left: 75.9%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 19.4px;
+  font-weight: 550;
+  text-align: center;
+}
+.step71 {
+  top: 39.5%;
+  left: 97.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 19.8px;
+  font-weight: 500;
+  text-align: left;
+}
+.step72 {
+  top: 46.5%;
+  left: 97.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 19.8px;
+  font-weight: 500;
+  text-align: left;
+}
+.step73 {
+  top: 54%;
+  left: 97.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 19.8px;
+  font-weight: 500;
+  text-align: left;
+}
+.step74 {
+  top: 81%;
+  left: 75.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 28px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+.s11 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.S6씬 {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(11\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.S6씬-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step75 {
+  top: 13.5%;
+  left: 37.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: center;
+}
+.step76 {
+  top: 32%;
+  left: 69%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 24px;
+  font-weight: 550;
+  text-align: center;
+}
+.step77 {
+  top: 42%;
+  left: 85%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+  text-align: left;
+}
+.step78 {
+  top: 51%;
+  left: 85%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+  text-align: left;
+}
+.step79 {
+  top: 80.5%;
+  left: 68.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 27.5px;
+  font-weight: 550;
+  font-style: italic;
+  text-align: center;
+}
+.s12 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.sound {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(12\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.sound-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.step80 {
+  top: 13.8%;
+  left: 30%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: center;
+}
+.step81 {
+  top: 28%;
+  left: 21%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: center;
+}
+.step82 {
+  top: 28%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: center;
+}
+.step83 {
+  top: 28%;
+  left: 78%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: center;
+  text-shadow: 1px 1px 7px #000;
+}
+.step84 {
+  top: 69%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+.step86 {
+  top: 87%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+.s13 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.finalcut {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(13\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.finalcut-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step87 {
+  top: 13%;
+  left: 30%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 47px;
+  font-weight: 550;
+  text-align: center;
+}
+.step88 {
+  top: 86%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 38px;
+  font-weight: 550;
+  text-align: center;
+  font-style: italic;
+}
+.s14 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+.vision {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  background-image: url("../img/team1/팀플1\ \(14\).png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.vision-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step89 {
+  top: 13%;
+  left: 30%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: center;
+}
+.step90 {
+  top: 44%;
+  left: 55%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step91 {
+  top: 51.5%;
+  left: 55%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
+.step92 {
+  top: 59.5%;
+  left: 55%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
+.step93 {
+  top: 44%;
+  left: 93%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step94 {
+  top: 51.5%;
+  left: 93%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
+.step95 {
+  top: 59.5%;
+  left: 93%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+}
