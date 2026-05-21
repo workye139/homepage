@@ -1,0 +1,1126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  height: 100vh; /* 화면 꽉 채움 */
+
+  background-size: cover; /* 꽉 채움 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+}
+
+/* 나머지 페이지 */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* s1 배경 이미지 설정 보완 */
+.s1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+
+/* 2. 텍스트와 배경을 하나로 묶어 강제로 16:9 비율을 유지하는 마법의 컨테이너 */
+.title {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/1.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.title-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+.step1{
+  top: 45.6%;
+  left: 50%;
+  font-family: 'Times New Roman';
+  color: black;
+  font-size: 75px;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 2px 2px 7px #000;
+} 
+.step2{
+  top: 63.8%;
+  left: 50.5%;
+  font-family: 'Times New Roman';
+  color: black;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 1px 2px #000;
+}   
+.step3{
+  top: 83.8%;
+  left: 53%;
+  font-family: 'Times New Roman';
+  color: black;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 1px 2px #000;
+}   
+
+.s2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.contents {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/2.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.contents-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+.step4 {
+  top: 15%;
+  left: 46.8%;
+  color: black;
+  font-size: 66px;
+  font-weight: 550;
+  text-align: left;
+}
+.step5 {
+  top: 38%;
+  left: 48.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: left;
+}
+.step6 {
+  top: 38%;
+  left: 80.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: left;
+}
+.step7 {
+  top: 38%;
+  left: 113%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: left;
+}
+.step8 {
+  top: 55%;
+  left: 48.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: left;
+}
+.step9 {
+  top: 52%;
+  left: 80.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: left;
+}
+.step10 {
+  top: 49%;
+  left: 113%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 26px;
+  font-weight: 550;
+  text-align: left;
+}
+.s3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.outline {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/3.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.outline-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+.step11 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 52px;
+  font-weight: 550;
+  text-align: left;
+}
+.step12 {
+  top: 38%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step13 {
+  top: 38%;
+  left: 94.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step14 {
+  top: 60%;
+  left: 53.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 29px;
+  font-weight: 550;
+  text-align: left;
+}
+.step15 {
+  top: 60%;
+  left: 98.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 29px;
+  font-weight: 550;
+  text-align: left;
+}
+.s4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.swot {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/4.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.swot-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+.step16 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 52px;
+  font-weight: 550;
+  text-align: left;
+}
+.step17 {
+  top: 30%;
+  left: 56%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step18 {
+  top: 40%;
+  left: 56%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step19 {
+  top: 30%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step20 {
+  top: 40%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step21 {
+  top: 59%;
+  left: 56%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step22 {
+  top: 67%;
+  left: 56%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step23 {
+  top: 59%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step24 {
+  top: 67%;
+  left: 92.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step25 {
+  top: 89.5%;
+  left: 56%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.s5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.planning1 {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/5.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.planning1-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+
+}
+.step26 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 52px;
+  font-weight: 550;
+  text-align: left;
+}
+.step27 {
+  top: 37.5%;
+  left: 48.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step28 {
+  top: 48%;
+  left: 48%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step29 {
+  top: 37.5%;
+  left: 99.2%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step30 {
+  top: 48%;
+  left: 99%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step31 {
+  top: 78%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step32 {
+  top: 87.5%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.s6 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.composition1 {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/6.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.composition1-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step33 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 52px;
+  font-weight: 550;
+  text-align: left;
+}
+.step34 {
+  top: 33.5%;
+  left: 54.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step35 {
+  top: 33.5%;
+  left: 77.2%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step36 {
+  top: 33.5%;
+  left: 99.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step37 {
+  top: 33.5%;
+  left: 116.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step38 {
+  top: 42.5%;
+  left: 17.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step39 {
+  top: 42.5%;
+  left: 39%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step40 {
+  top: 42.5%;
+  left: 61.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step41 {
+  top: 42.5%;
+  left: 83%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step42 {
+  top: 61.5%;
+  left: 6%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step43 {
+  top: 61.5%;
+  left: 28%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step44 {
+  top: 61.5%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step45 {
+  top: 61.5%;
+  left: 72%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step46 {
+  top: 61.5%;
+  left: 94%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step47 {
+  top: 68.5%;
+  left: 17.2%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step48 {
+  top: 68.5%;
+  left: 39%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step49 {
+  top: 68.5%;
+  left: 61.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step50 {
+  top: 68.5%;
+  left: 83%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.step51 {
+  top: 87%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+.s7 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.brand {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/7.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.brand-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step52 {
+  top: 14%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: left;
+}
+.step53 {
+  top: 56%;
+  left: 49%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 35px;
+  font-weight: 550;
+  text-align: left;
+}
+.step54 {
+  top: 56%;
+  left: 93%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 34px;
+  font-weight: 550;
+  text-align: left;
+}
+.step55 {
+  top: 81%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 34px;
+  font-weight: 550;
+  text-align: center;
+}
+.s8 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.planning2 {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/8.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.planning2-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step56 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 49px;
+  font-weight: 550;
+  text-align: left;
+}
+.step57 {
+  top: 38%;
+  left: 48%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 40px;
+  font-weight: 550;
+  text-align: left;
+}
+.step58 {
+  top: 58%;
+  left: 48%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: left;
+}
+.step59 {
+  top: 59.5%;
+  left: 82%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 36px;
+  font-weight: 550;
+  text-align: left;
+}
+.step60 {
+  top: 38%;
+  left: 100.2%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 40px;
+  font-weight: 550;
+  text-align: left;
+}
+.step61 {
+  top: 59%;
+  left: 100.2%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: left;
+}
+.s9 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.reels {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/9.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.reels-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step62 {
+  top: 12%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 42px;
+  font-weight: 550;
+  text-align: left;
+}
+.step63 {
+  top: 29%;
+  left: 81.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 18px;
+  font-weight: 550;
+  text-align: left;
+}
+.step64 {
+  top: 46.7%;
+  left: 81.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 18px;
+  font-weight: 550;
+  text-align: left;
+}
+.step65 {
+  top: 65%;
+  left: 81.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 18px;
+  font-weight: 550;
+  text-align: left;
+}
+.step66 {
+  top: 83.5%;
+  left: 81.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 18px;
+  font-weight: 550;
+  text-align: left;
+}
+.step67 {
+  top: 55%;
+  left: 110.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 24px;
+  font-weight: 550;
+  text-align: left;
+}
+.s10 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.tools {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/10.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.tools-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step68 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: left;
+}
+.step69 {
+  top: 40%;
+  left: 50.3%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step70 {
+  top: 58%;
+  left: 45.8%;
+  font-family: 'sans-serif';
+  color:black;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: left;
+}
+.step71 {
+  top: 34%;
+  left: 50%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: center;
+}
+.step72 {
+  top: 48%;
+  left: 79%;
+  font-family: 'sans-serif';
+  color:black;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: left;
+}
+.step73 {
+  top: 67%;
+  left: 79%;
+  font-family: 'sans-serif';
+  color:black;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: left;
+}
+.step74 {
+  top: 40%;
+  left: 82.5%;
+  font-family: 'sans-serif';
+  color: white;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: center;
+}
+.step75 {
+  top: 56%;
+  left: 114%;
+  font-family: 'sans-serif';
+  color:black;
+  font-size: 27px;
+  font-weight: 550;
+  text-align: left;
+}
+.s11 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ★중요: 화면 밖으로 삐져나가는 컨테이너를 숨김 */
+  background-color: #000;
+}
+.strategy {
+  position: absolute;
+  /* ★핵심: 어떤 화면에서든 컨테이너가 16:9 비율을 유지하며 꽉 차게 만드는 공식 */
+  width: 100vw;
+  height: 56.25vw; /* 100vw * (9/16) */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100vh * (16/9) */
+
+  /* .s2에 있던 배경 이미지를 이 컨테이너로 옮겨옵니다! */
+  background-image: url("../img/team2/11.png");
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+/* 3. 로드맵 텍스트 공통 스타일 (기존과 동일) */
+.strategy-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.5vw, 24px);
+  letter-spacing: 1px;
+  width: 80%;
+}
+.step76 {
+  top: 15%;
+  left: 46.8%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 48px;
+  font-weight: 550;
+  text-align: left;
+}
+.step77 {
+  top: 30.5%;
+  left: 48%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 38px;
+  font-weight: 550;
+  text-align: left;
+}
+.step78 {
+  top: 45%;
+  left: 48%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step79 {
+  top: 30.5%;
+  left: 94.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 38px;
+  font-weight: 550;
+  text-align: left;
+}
+.step80 {
+  top: 45%;
+  left: 94.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+}
+.step81 {
+  top: 77%;
+  left: 16%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 32px;
+  font-weight: 550;
+  text-align: center;
+}
+.step82 {
+  top: 77%;
+  left: 71%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+}
+.step83 {
+  top: 77%;
+  left: 101.5%;
+  font-family: 'sans-serif';
+  color: black;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+}
